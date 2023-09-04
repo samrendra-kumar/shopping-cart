@@ -23,10 +23,10 @@ const Cart = () => {
     <div className="flex flex-col">
   {
     cart.length > 0  ? 
-    (<div  className="mx-auto flex flex-row w-11/12  justify-center">
+    (<div  className="mx-auto flex flex-row w-11/12  justify-center lg:flex-row sm:flex-col ">
 
 
-      <div className="max-w-maxContent max-w-[50%]">
+      <div className="max-w-maxContent max-w-[50%] overflow-y-hidden sm:h-[100%]">
         {
           cart.map( (item,index) => {
             return <CartItem key={item.id} item={item} itemIndex={index} />
@@ -34,9 +34,9 @@ const Cart = () => {
         }
       </div>
 
-      <div className="grid grid-rows-2 content-between ">
+      <div className="grid grid-rows-2 content-between sm:grid-rows-1 sm:content-end">
 
-        <div className="sticky top-3  mt-8 ">
+        <div className="lg:sticky top-3  mt-8  ">
           <div className="text-green-500 font-light text-xl">Your Cart</div>
           <div className="text-green-500 font-bold text-3xl">SUMMARY</div>
           <p className="font-bold text-green-900">
@@ -44,7 +44,7 @@ const Cart = () => {
           </p>
         </div>
 
-        <div className=" self-end sticky bottom-[10px] mb-[10px]">
+        <div className=" lg:self-end lg:sticky bottom-[10px] mb-[10px]  ">
           <p className="text-green-900 font-bold">Total Amount: ${totalAmount}</p>
           <NavLink to="/">
           <button className="bg-lime-700 text-white w-[100%]">

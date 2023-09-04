@@ -20,7 +20,7 @@ const CartItem = ({item, itemIndex}) => {
         <div className="w-[200px] object-cover">
           <img   src={item.image} />
         </div>
-        <div  className="flex flex-col gap-3">
+        <div  className="flex flex-col gap-3 sm:gap-1">
           <h1 className="font-bold text-2xl">{item.title}</h1>
           <h1>{item.description.substring(0,125)}...</h1>
           <div className="flex flex-row justify-between">
